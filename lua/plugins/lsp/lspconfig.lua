@@ -60,7 +60,7 @@ return {
         pylsp = {
           plugins = {
             -- formatter options
-            black = { enabled = true },
+            black = { enabled = false },
             autopep8 = { enabled = false },
             yapf = { enabled = false },
             -- linter options
@@ -71,8 +71,7 @@ return {
 
 						flake8 = {
 							enabled = true,
-							ignore = { "E501" },
-							maxLineLength = 88,
+							maxLineLength = 79,
 						},
 
             -- type checker
@@ -80,23 +79,11 @@ return {
             -- auto-completion options
             jedi_completion = { fuzzy = true },
             -- import sorting
-            pylsp_isort = { enabled = true },
+            pylsp_isort = { enabled = false },
             rope_completion = { enabled = true },
             rope_autoimport = {
               enabled = true,
             },
-          },
-        },
-      },
-    })
-
-    vim.lsp.config("ruff", {
-      settings = {
-        init_options = {
-          settings = {
-            -- Arguments par défaut de la ligne de commande ruff
-            -- (on ajoute les warnings pour le tri des imports)
-            args = { "--extend-select", "I" },
           },
         },
       },

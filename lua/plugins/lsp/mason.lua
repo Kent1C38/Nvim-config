@@ -35,7 +35,6 @@ return {
         "html",
         "lua_ls",
         "pylsp",
-        "ruff",
         "rust_analyzer",
         "sqlls",
         "svelte",
