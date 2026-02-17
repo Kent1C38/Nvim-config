@@ -49,6 +49,7 @@ return {
 			-- sources pour l'autocompletion
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp" },
+				{ name = "crates" },
 				{ name = "nvim_lua" },
 				{ name = "luasnip" }, -- snippets
 				{ name = "buffer" }, -- texte du buffer courant
