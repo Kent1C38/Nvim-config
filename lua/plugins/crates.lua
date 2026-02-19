@@ -24,7 +24,7 @@ return {
 		-- Les fonctions modernes n'ont plus le préfixe 'show_' ou 'focus_'
 		-- dans les dernières versions, on utilise souvent l'API directe :
 
-		vim.keymap.set('n', '<leader>ct', crates.toggle, opts)
+		vim.keymap.set('n', '<leader>ct', crates.toggle, { silent = true, desc = "Toggle crates.nvim" })
 		vim.keymap.set('n', '<leader>cr', crates.reload, opts)
 
 		-- Pour ouvrir et entrer dans la fenêtre (Versions / Features)
